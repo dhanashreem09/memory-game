@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game-EB Edutech</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Word-Picture Memory Game</h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Moves
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"> Restart</i>
+        	</div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="diamond">
+                <i class="fa fa-tv"></i>
+            </li>
+            <li class="card" type="plane">
+                <i class="fa fa-star"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-key"></i>
+            </li>
+            <li class="card" type="bolt" >
+                <i class="fa fa-car"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-bell"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i>Key</i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-eye"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-male"></i>
+            </li>
+            <li class="card" type="diamond">
+                <i>TV</i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-home"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i>Eye</i>
+            </li>
+            <li class="card" type="bomb">
+                <i>Home</i>
+            </li>
+            <li class="card open show" type="bolt">
+                <i>Car</i>
+            </li>
+            <li class="card" type="bicycle">
+                <i>Man</i>
+            </li>
+            <li class="card" type="plane">
+                <i>Star</i>
+            </li>
+            <li class="card" type="cube">
+                <i>Bell</i>
+            </li>
+        </ul>
+
+        <div>
+            <audio controls autoplay>
+              <source src="Rev.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div>
+            <a href="#"><button class="button button5">More Games</button></a>
+        </div>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>** Congratulations **</h2>
+                <div class="content-1">
+                    Congratulations you're a winner !!
+                </div>
+                <div class="content-2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                </div>
+                <button id="play-again"onclick="playAgain()">
+                    Play again </a>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
